@@ -7,6 +7,10 @@ function Players(username, diceScores, totalScores, overallScores) {
   this.overallScores = 0;
 }
 // Create Random Generator
+function resetFields() {
+  var player1 = $("input#player1-userName").val("");
+  var player2 = $("input#player2-userName").val("");
+}
 Players.prototype.roll = function() {
   var diceRoll = Math.floor((Math.random() * 6) + 1);
 
@@ -24,6 +28,7 @@ Players.prototype.hold = function() {
   this.overallScores += this.totalScores;
   this.totalScores = 0;
   return this.overallScores;
+
 };
 
 //user interface
@@ -56,5 +61,8 @@ $(document).ready(function() {
     $("#player1Hold").click(function() {
       $(".Player2-overallScores").text(gamer2.hold());
     });
+    var player1 = $("input#player1-userName").val("");
+    var player2 = $("input#player2-userName").val("");
   });
+  resetFields();
 });
