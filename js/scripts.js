@@ -58,7 +58,7 @@ $(document).ready(function() {
     $("#player1Hold").click(function() {
       $(".Player1-overallScores").text(gamer1.hold());
     });
-    $("#player1Hold").click(function() {
+    $("#player2Hold").click(function() {
       $(".Player2-overallScores").text(gamer2.hold());
     });
     var player1 = $("input#player1-userName").val("");
