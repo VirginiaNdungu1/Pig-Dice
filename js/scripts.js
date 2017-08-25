@@ -1,9 +1,10 @@
 // Business Logic
 // create player constructor
-function Players(username, diceScores, totalScores) {
+function Players(username, diceScores, totalScores, overallScores) {
   this.username = username;
   this.diceScores = 0;
   this.totalScores = 0;
+  this.overallScores = 0;
 }
 // Create Random Generator
 Players.prototype.roll = function() {
@@ -17,6 +18,12 @@ Players.prototype.roll = function() {
   }
   return diceRoll;
   //console.log(randomNumber);
+};
+
+Players.prototype.hold = function() {
+  this.overallScores += this.totalScores;
+  this.totalScores = 0;
+  return this.overallScores;
 };
 
 //user interface
@@ -42,6 +49,12 @@ $(document).ready(function() {
       //console.log(gamer2.roll());
       $(".Player2-diceScores").text(gamer2.roll());
       $(".Player2-totalScores").text(gamer2.totalScores);
+    });
+    $("#player1Hold").click(function() {
+      $(".Player1-overallScores").text(gamer1.hold());
+    });
+    $("#player1Hold").click(function() {
+      $(".Player2-overallScores").text(gamer2.hold());
     });
   });
 });
