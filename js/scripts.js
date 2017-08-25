@@ -7,9 +7,16 @@ function Players(username, diceScores, totalScores) {
 }
 // Create Random Generator
 Players.prototype.roll = function() {
-  var randomNumber = Math.floor((Math.random() * 6) + 1);
-  return randomNumber;
-  console.log(randomNumber);
+  var diceRoll = Math.floor((Math.random() * 6) + 1);
+
+  if (diceRoll === 1) {
+    this.totalScores = 0;
+    alert("Ooops!!! You got a 1. Your turn is over!!!!!")
+  } else {
+    this.totalScores += diceRoll;
+  }
+  return diceRoll;
+  //console.log(randomNumber);
 };
 
 //user interface
@@ -28,11 +35,13 @@ $(document).ready(function() {
       event.preventDefault();
       //console.log(gamer1.roll());
       $(".Player1-diceScores").text(gamer1.roll());
+      $(".Player1-totalScores").text(gamer1.totalScores);
     });
     $("#player2Roll").click(function(event) {
       event.preventDefault();
-      //console.log(gamer1.roll());
+      //console.log(gamer2.roll());
       $(".Player2-diceScores").text(gamer2.roll());
+      $(".Player2-totalScores").text(gamer2.totalScores);
     });
   });
 });
