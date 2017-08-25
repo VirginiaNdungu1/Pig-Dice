@@ -1,19 +1,22 @@
 // Business Logic
 // create player constructor
-function Players(username, turnScores, totalScores) {
+function Players(username, diceScores, totalScores) {
   this.username = username;
-  this.currentScore = turnScores;
-  this.tallyScore = totalScores;
+  this.diceScores = 0;
+  this.totalScores = 0;
 }
 
-//user interfaceplayer1Name
-//
+//user interface
+
 $(document).ready(function() {
   $("form#players").submit(function(event) {
     event.preventDefault();
-    var player1UserName = $("input#player1-userName").val();
-    var player2UserName = $("input#player2-userName").val();
-    $(".player1Name").text(player1UserName);
-    $(".player2Name").text(player2UserName);
+    var player1 = $("input#player1-userName").val();
+    var player2 = $("input#player2-userName").val();
+    var gamer1 = new Players(player1);
+    var gamer2 = new Players(player2);
+    $(".player1Name").text(gamer1.username);
+    $(".player2Name").text(gamer2.username);
+
   });
 });
