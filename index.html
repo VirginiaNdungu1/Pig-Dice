@@ -11,7 +11,92 @@
 </head>
 
 <body>
+  <div class="jumbotron">
+    <div class="container-fluids">
+      <div class="diceRules">
+        <h1>Let's Play Dice!!!!</h1>
+        <ol>
+          <li>Each player has a chance to play 6 consecutive times at a time</li>
 
+          <li>If a player roles the dice to 1, their score is reset to zero and their opponent has an opportunity to play</li>
+
+          <li>A player is allowed to Hold. Their current score is reset to their Total Score</li>
+
+          <li>The first player to score 100 points wins!!!!</li>
+        </ol>
+      </div>
+    </div>
+  </div>
+  <div class="well well-lg">
+    <div class="playerInput">
+      <div class="row">
+        <form id="players">
+          <div class="col-md-6">
+            <form id="new-player1">
+              <div class="form-group">
+                <label for="player1">PLAYER 1</label>
+              </div>
+              <div class="form-group">
+                <label for="player1-firstName">First Name:</label>
+                <input type="text" id="player1-firstName" class="form-control">
+              </div>
+              <div class="form-group">
+                <label for="player1-lastName">Last Name:</label>
+                <input type="text" id="player1-lastName" class="form-control">
+              </div>
+              <div class="form-group">
+                <label for="player1-userName">Username:</label>
+                <input type="text" id="player1-userName" class="form-control">
+              </div>
+            </form>
+          </div>
+          <div class="col-md-6">
+            <form id="new-player2">
+              <div class="form-group">
+                <label for="player2">PLAYER 2</label>
+              </div>
+              <div class="form-group">
+                <label for="player2-firstName">First Name:</label>
+                <input type="text" id="player2-firstName" class="form-control">
+              </div>
+              <div class="form-group">
+                <label for="player2-lastName">Last Name:</label>
+                <input type="text" id="player2-lastName" class="form-control">
+              </div>
+              <div class="form-group">
+                <label for="player2-userName">Username:</label>
+                <input type="text" id="player2-userName" class="form-control">
+              </div>
+            </form>
+          </div>
+          <span class="btn btn-danger" id="add-player">Let's Play!</span>
+        </form>
+      </div>
+    </div>
+  </div>
+  <div class="well">
+    <div class="row">
+      <div class="col-md-6">
+        <div id="showPlayer1">
+          <form>
+            <div class="form-group">
+              <input type="text" id="player1-userName" class="form-control" placeholder="Player 1">
+            </div>
+          </form>
+        </div>
+      </div>
+      <div class="col-md-6">
+        <div id="showPlayer2">
+          <form>
+            <div class="form-group">
+              <input type="text" id="player2-userName" class="form-control" placeholder="Player 2">
+            </div>
+          </form>
+        </div>
+      </div>
+
+    </div>
+  </div>
 </body>
 
 </html>
