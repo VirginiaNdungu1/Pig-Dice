@@ -32,44 +32,24 @@
       <div class="row">
         <form id="players">
           <div class="col-md-6">
-            <form id="new-player1">
-              <div class="form-group">
-                <label for="player1">PLAYER 1</label>
-              </div>
-              <div class="form-group">
-                <label for="player1-firstName">First Name:</label>
-                <input type="text" id="player1-firstName" class="form-control">
-              </div>
-              <div class="form-group">
-                <label for="player1-lastName">Last Name:</label>
-                <input type="text" id="player1-lastName" class="form-control">
-              </div>
-              <div class="form-group">
-                <label for="player1-userName">Username:</label>
-                <input type="text" id="player1-userName" class="form-control">
-              </div>
-            </form>
+            <div class="form-group">
+              <h2>PLAYER 1</h2>
+            </div>
+            <div class="form-group">
+              <label for="player1-userName">Username:</label>
+              <input type="text" id="player1-userName" class="form-control">
+            </div>
           </div>
           <div class="col-md-6">
-            <form id="new-player2">
-              <div class="form-group">
-                <label for="player2">PLAYER 2</label>
-              </div>
-              <div class="form-group">
-                <label for="player2-firstName">First Name:</label>
-                <input type="text" id="player2-firstName" class="form-control">
-              </div>
-              <div class="form-group">
-                <label for="player2-lastName">Last Name:</label>
-                <input type="text" id="player2-lastName" class="form-control">
-              </div>
-              <div class="form-group">
-                <label for="player2-userName">Username:</label>
-                <input type="text" id="player2-userName" class="form-control">
-              </div>
-            </form>
+            <div class="form-group">
+              <h2>PLAYER 2</h2>
+            </div>
+            <div class="form-group">
+              <label for="player2-userName">Username:</label>
+              <input type="text" id="player2-userName" class="form-control">
+            </div>
           </div>
-          <span class="btn btn-danger" id="add-player">Let's Play!</span>
+          <button type="submit" class="btn btn-danger">Let's Play</button>
         </form>
       </div>
     </div>
@@ -78,20 +58,12 @@
     <div class="row">
       <div class="col-md-6">
         <div id="showPlayer1">
-          <form>
-            <div class="form-group">
-              <input type="text" id="player1-userName" class="form-control" placeholder="Player 1">
-            </div>
-          </form>
+          <h3>Player 1: <span class="player1Name"></span> </h3>
         </div>
       </div>
       <div class="col-md-6">
         <div id="showPlayer2">
-          <form>
-            <div class="form-group">
-              <input type="text" id="player2-userName" class="form-control" placeholder="Player 2">
-            </div>
-          </form>
+          <h3>Player 2: <span class="player2Name"></span></h3>
         </div>
       </div>
     </div>
